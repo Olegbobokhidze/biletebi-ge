@@ -5,7 +5,6 @@ export default function EventPage() {
   return (
     <main className="w-full flex text-black mt-20">
       <div className="mx-auto max-w-384 px-4 min-h-[calc(100vh-64px)] flex">
-        {/* LEFT — TEXT */}
         <section className="w-full pr-12 py-16 overflow-y-auto">
           <h1 className="text-4xl font-bold mb-8">მაკნატუნა</h1>
 
@@ -75,7 +74,6 @@ export default function EventPage() {
           </article>
         </section>
 
-        {/* RIGHT — IMAGE */}
       </div>
       <aside className="w-[30%] sticky top-24 h-[calc(100vh-96px)]">
         <Image

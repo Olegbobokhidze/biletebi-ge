@@ -7,7 +7,6 @@ import { BiletebiIcon } from "@/assets/BiletebiIcon";
 export default function Navbar() {
   return (
     <nav className="h-26 fixed top-0 z-10 w-full bg-background flex items-center justify-center py-4">
-      {/* LOGO */}
       <div className="w-full max-w-384 px-4 flex items-center justify-center">
         <Link
           href="/"
@@ -16,7 +15,6 @@ export default function Navbar() {
           <BiletebiIcon />
         </Link>
 
-        {/* SEARCH */}
         <div className="relative ml-20 w-[52%]">
           <input
             type="text"

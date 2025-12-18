@@ -59,7 +59,6 @@ export default function RootLayout({
       >
         <Navbar />
 
-        {/* ყველა გვერდი აქ ჩაიტვირთება */}
         <main className="min-h-[calc(100vh-64px)]">{children}</main>
       </body>
     </html>
