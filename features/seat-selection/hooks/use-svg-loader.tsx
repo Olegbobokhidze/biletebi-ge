@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader";
+import { SVGLoader } from "three/addons/loaders/SVGLoader.js";
 import { useRef, useState, useEffect } from "react";
 import { Seat } from "@/features/seat-selection/interfaces";
 
