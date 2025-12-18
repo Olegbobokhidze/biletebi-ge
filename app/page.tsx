@@ -1,65 +1,115 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function EventPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="w-full flex text-black mt-20">
+      <div className="mx-auto max-w-384 px-4 min-h-[calc(100vh-64px)] flex">
+        {/* LEFT — TEXT */}
+        <section className="w-full pr-12 py-16 overflow-y-auto">
+          <h1 className="text-4xl font-bold mb-8">მაკნატუნა</h1>
+
+          <p className="font-medium mb-4">ბილეთის საყიდლად აირჩიეთ დრო</p>
+          <div className="py-4 flex items-center justify-center gap-4">
+            <Card id={1} date="18 დეკ, 19:00" price="30 ლარი" />
+            <Card id={2} date="19 დეკ, 19:00" price="35 ლარი" />
+            <Card id={3} date="20 დეკ, 19:00" price="40 ლარი" />
+          </div>
+          <p className="text-sm text-muted-foreground mb-2">
+            ორგანიზატორი: მარიამ უგრეხელიძის კამერული საბალეტო დასი
+          </p>
+
+          <p className="text-sm text-muted-foreground mb-6">
+            გრიბოედოვის თეატრი
+          </p>
+
+          <article className="space-y-5 text-sm leading-6">
+            <p>
+              საბალეტო კამერული დასი წარმოგიდგენთ პეტრე ჩაიკოვსკის ბალეტ
+              “მაკნატუნას”, ერნსტ თეოდორ ჰოფმანის ზღაპრის მიხედვით, გრიბოედოვის
+              თეატრში.
+            </p>
+
+            <p>
+              `მაკნატუნა` — ჰოფმანის ჯადოსნური ზღაპარია, რომელიც ერთნაირად
+              შეუყვარდათ დიდებსაც და პატარებსაც.
+            </p>
+
+            <p>
+              ზღაპარი მოგვითხრობს მამაც გოგონა კლარაზე, მოჯადოებულ პრინც
+              მაკნატუნასა და ბოროტი თაგვების მეფის შესახებ...
+            </p>
+
+            <p>
+              მარიამ უგრეხელიძის კამერული ბალეტის მიერ დადგმული ბალეტი
+              „მაკნატუნა“ არის საოცარი, იდუმალი, კეთილი ზღაპარი...
+            </p>
+
+            <p className="font-medium">დაუვიწყარი საღამო გელით!</p>
+
+            <p>
+              საბალეტო კამერული დასის სამხატვრო ხელმძღვანელი და დამდგმელი
+              ქორეოგრაფი — მარიამ უგრეხელიძე.
+            </p>
+
+            <p>საღამოს ორგანიზატორი და კოსტიუმების მხატვარი — მადონა ნიორაძე</p>
+
+            <div>
+              <h3 className="font-semibold mb-2">მონაწილეები:</h3>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>კლარა შტალბაუმი — ქეთევან კობახიძე, ელენე წიკლაური</li>
+                <li>მაკნატუნა / პრინცი — გიორგი სანიკიძე</li>
+                <li>ლედი შტალბაუმი — ანასტასია მელიქიშვილი</li>
+                <li>ყვავილების დედოფალი — მარიამ უგრეხელიძე</li>
+                <li>ბენჟამინ შტალბაუმი — ნიკოლოზ გუმბერიძე</li>
+                <li>ფრიც შტალბაუმი — ბაია ჯაკობია</li>
+                <li>ლუიზა შტალბაუმი — მარიამ გოგოძე</li>
+                <li>დროსელმეიერი — ბესარიონ შათირიშვილი</li>
+                <li>ზაფხულის ფერია — ელენე წიკლაური</li>
+              </ul>
+            </div>
+
+            <p className="italic">
+              მ. უგრეხელიძის საბალეტო სკოლის აღსაზრდელები.
+            </p>
+          </article>
+        </section>
+
+        {/* RIGHT — IMAGE */}
+      </div>
+      <aside className="w-[30%] sticky top-24 h-[calc(100vh-96px)]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/maknatuna.webp"
+          alt="მაკნატუნა"
+          fill
+          className="object-cover"
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </aside>
+    </main>
   );
 }
+
+type CardProps = {
+  id: number;
+  date: string;
+  price: string;
+};
+
+const Card = ({ id, date, price }: CardProps) => {
+  return (
+    <Link
+      href={`/seat-selection/${id}`}
+      className="border w-full flex items-center justify-center cursor-pointer relative border-gray-300 rounded-lg h-24 hover:border-gray-700 transition-colors"
+    >
+      <div className="absolute top-2 left-2 bg-purple-100 p-1 rounded-md font-medium">
+        ხუთ
+      </div>
+
+      <div className="flex flex-col items-center justify-center gap-2">
+        <h1 className="font-semibold">{date}</h1>
+        <p>{price}</p>
+      </div>
+    </Link>
+  );
+};
