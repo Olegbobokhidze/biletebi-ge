@@ -1,13 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
-import { ArrowLeft, Calendar } from "lucide-react";
-import { Seat } from "@/features/seat-selection/interfaces";
+import { ArrowLeft } from "lucide-react";
 import { SeatCard } from "@/features/seat-selection/components/seat-card";
-import { SeatScene } from "@/features/seat-selection/components/seat-scene";
 import { Hall } from "@/features/seat-selection/components/hall";
 import { EventCard } from "@/features/seat-selection/components/event-info-card";
 import { mockSeats } from "@/features/seat-selection/config/mock-seats";

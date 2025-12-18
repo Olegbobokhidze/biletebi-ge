@@ -1,5 +1,3 @@
-import React from "react";
-
 export const HallLegend = () => {
   return (
     <div className="flex gap-6 text-sm">
